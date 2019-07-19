@@ -1,0 +1,69 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Documentos
+    </ion-title>
+    <ion-button slot="end" color="light" (click)="aumentarFonte()"  >
+        <h3>A+</h3>
+    </ion-button>
+    <ion-button slot="end" color="light" (click)="diminuirFonte()"  >
+        <h6>A-</h6>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+    <div class="row  p-5">
+      <div class="col-sm">
+        <table class="table table-sm table-bordered text-center">
+          <thead class="thead-dark">
+
+            <tr>
+              <th scope="col">Documento</th>
+              <th scope="col"></th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr>
+              <td> Declaração de matrícula </td>
+              <td>
+                <ion-button expand="full" (click)="emitirDoc('Declaração de matrícula ')">Emitir</ion-button>
+              </td>
+            </tr>
+            <tr>
+              <td>Histórico </td>
+              <td>
+                <ion-button expand="full" (click)="emitirDoc('Histórico')">Emitir</ion-button>
+              </td>
+            </tr>
+            <tr>
+              <td> Declaração IR </td>
+              <td>
+                <ion-button expand="full" (click)="emitirDoc('Declaração IR ')">Emitir</ion-button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row text-center">
+      <div class="col-sm">
+
+
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>

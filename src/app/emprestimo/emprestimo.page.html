@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Empréstimo
+    </ion-title>
+    <ion-button slot="end" color="light" (click)="aumentarFonte()"  >
+        <h3>A+</h3>
+    </ion-button>
+    <ion-button slot="end" color="light" (click)="diminuirFonte()"  >
+        <h6>A-</h6>
+    </ion-button>
+
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container text-center p-4">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+
+            
+
+          <table class="table table-striped" *ngIf="obra" >
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">N. Obra </th>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>              
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>{{obra.cdd}}</td>
+                <td>{{obra.titulo}}</td>
+                <td>{{obra.autor}}</td>              
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped" *ngIf="obra" >          
+              <tbody>              
+                <tr>
+                  <td>Data empréstimo</td>
+                  <td> {{dataInicio | date:'dd/MM/yyyy HH:mm:ss' }} </td>                     
+                </tr>
+                <tr>
+                    <td>Data entrega</td>
+                    <td> {{dataFim | date:'dd/MM/yyyy HH:mm:ss' }} </td>                     
+                  </tr>
+              </tbody>
+            </table>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 3%">
+          <ion-col>
+              <ion-button  expand="full" (click)="confirmarEmprestimo()"  >Confirmar Empréstimo</ion-button>
+          </ion-col>          
+      </ion-row>
+
+    </ion-grid>
+
+  </div>
+
+
+
+</ion-content>

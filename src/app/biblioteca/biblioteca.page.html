@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Biblioteca
+    </ion-title>
+    <ion-button slot="end" color="light" (click)="aumentarFonte()"  >
+        <h3>A+</h3>
+    </ion-button>
+    <ion-button slot="end" color="light" (click)="diminuirFonte()"  >
+        <h6>A-</h6>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="bg">
+    <div class="container">
+
+       
+
+      <div class="row  p-3">
+        <div class="col-sm">
+
+
+
+
+          <a [routerLink]="['/acervo']">
+            <ion-card>
+              <img src="../../assets/acervo.png">
+              <!-- <ion-card-content>
+               Agora você já pode emitir seus boletins acadêmicos com facilidade
+              </ion-card-content> -->
+            </ion-card>
+          </a>
+
+
+
+        </div>
+        <div class="col-sm">
+
+          <a [routerLink]="['/acervo']">
+            <ion-card>
+              <img src="../../assets/emprestimo.png">
+              <!-- <ion-card-content>
+                Acesse todos os seus pagamentos e emita seus boletos em um só lugar.
+              </ion-card-content> -->
+            </ion-card>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>
